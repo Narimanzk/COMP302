@@ -1,0 +1,14 @@
+Case 1
+None of them are in violaton of the policy. Hanna simply suggested one possible error of the code as a 'CS wiz' and did not provide her solution.
+Bob and Tom realized their mistake from her tip, and fixed their code.
+
+
+Case 2
+Bob and anyone who copied his solutions from Wikinotes are in violation.
+Bob didn't protect his work and anyone who copied his work to submit an assignment would be going against the rule.
+However, if this is happening near final (after all assignments submissions are done), and if the students are using them as study reference, they are not in violation.
+
+
+Case 3
+Abbey John and Matt are in violation.
+Abbey didn't protect her work and the Team of John and Matt received the acutal code solution of Abbey's work, who is not in their team, and submitted the solution as their assignment.

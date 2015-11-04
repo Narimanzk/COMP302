@@ -1,0 +1,55 @@
+I used ocaml hw1-fixme.ml to compile in a shell.
+
+
+File "hw1-fixme.ml", line 12, characters 23-25:
+Error: Syntax error
+
+This correspond to the part 'n of', which mis-used the keyword 'match ... with'.
+So, it will become 'let dble int = match n with'
+
+
+File "hw1-fixme.ml", line 13, characters 6-8:
+Error: Syntax error
+
+The arrow should be '->' instead of '=>' in line 13.
+
+
+File "hw1-fixme.ml", line 14, characters 6-8:
+Error: Syntax error
+
+The same mistake as the previous one. The arrow should be '->' in line 14
+
+
+File "hw1-fixme.ml", line 30, characters 4-5:
+Error: Syntax error
+To show a case where n is _ (any value), there should be a '|' in front of the line to show that it is
+one of the possible cases. So, '|' should be added in front of _ at line 30.
+Although it not a mistake/error, I personally would put '|' at line 29 to make | 0 -> 1.0
+
+
+File "hw1-fixme.ml", line 12, characters 21-22:
+Error: Unbound value n
+n is not mentioned before the pattern matching. n is supposed to be the number to be doubled.
+So, when defining the function dble, the input should be 'n' instead of 'int' to make line 12 into let dble n = match n with
+
+
+File "hw1-fixme.ml", line 14, characters 14-18:
+Error: Unbound value dble
+This refers to the line 14 in which the fuction recursively compute the value.
+In OCaml, if recursive, 'rec' should be mentioned while defining the function.
+So, to fix it, we would need to fix line 12 instead into 
+'let rec dble n = match n with'
+
+
+File "hw1-fixme.ml", line 30, characters 15-24:
+Error: Unbound value factorial
+
+this correspond to 'factorial' in the last line. The function is named as 'fact', not factorial. We need to change 'factorial' into 'fact'
+So, the line 30 should be changed to | _ -> n*(fact (n - 1))
+
+
+Error: This expression has type float but an expression was expected of type
+         int
+This points at the recursive fact function call at line 30, but it is actually caused by the line 29, when n is 0.
+In line 29 where | 0 -> 1.0  , it says when n is 0, return 1.0, which is a float. However, as stated in the comments,
+fact : int -> int. So, 1.0 should be changed into 1, which returns int now
